@@ -39,7 +39,7 @@ def limits_items():
 
 creator1 = threading.Thread(target=create_items)
 creator2 = threading.Thread(target=create_items_2)
-limitor = threading.Thread(target=limits_items, daemon=True)
+limitor = threading.Thread(target=limits_items, daemon=True)  # Once the main program terminate, daemon thread will be forced to terminate as well.
 
 creator1.start()
 creator2.start()
